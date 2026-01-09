@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://rjphewks3u7d"]
 
-[ext_resource type="PackedScene" uid="uid://116xg0t83kmo" path="res://model/coffee-mug.blend" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dn3o4enc4mrvo" path="res://model/coffee_mug.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://dvauq47q7yidv" path="res://mouse_spin.gd" id="2_0xm2m"]
 
 [sub_resource type="Environment" id="Environment_ig7tw"]
 background_mode = 1
@@ -9,128 +10,6 @@ ambient_light_source = 2
 ambient_light_color = Color(0.41972736, 0.14681348, 0.1895349, 1)
 reflected_light_source = 1
 tonemap_mode = 3
-
-[sub_resource type="Curve" id="Curve_0xm2m"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5418251, 1), 0.0, 0.0, 0, 0, Vector2(0.89923954, 0), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="CurveTexture" id="CurveTexture_h2yge"]
-curve = SubResource("Curve_0xm2m")
-
-[sub_resource type="Gradient" id="Gradient_ig7tw"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.15720081, 0.32352942, 0.51014197, 0.6764706, 0.8245436)
-colors = PackedColorArray(0.16548634, 0.78443116, 0.99999994, 1, 0, 0.864234, 0.30025715, 1, 0.62845683, 1, 0.60608405, 1, 0.9477964, 0.8556657, 0.33949938, 1, 1, 0.4815889, 0.29748052, 1, 0.9792498, 1.732707e-06, 0.57633585, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_0xm2m"]
-gradient = SubResource("Gradient_ig7tw")
-
-[sub_resource type="CurveTexture" id="CurveTexture_1bvp3"]
-curve = SubResource("Curve_0xm2m")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ig7tw"]
-emission_shape_scale = Vector3(0.8, 0.8, 0.2)
-emission_shape = 6
-emission_ring_axis = Vector3(0, 0, 1)
-emission_ring_height = 1.0
-emission_ring_radius = 1.0
-emission_ring_inner_radius = 0.0
-emission_ring_cone_angle = 90.0
-direction = Vector3(0, 0, -1)
-spread = 0.0
-gravity = Vector3(0, 0.7, 0)
-scale_min = 0.79999995
-scale_max = 1.1999999
-scale_curve = SubResource("CurveTexture_1bvp3")
-color_initial_ramp = SubResource("GradientTexture1D_0xm2m")
-alpha_curve = SubResource("CurveTexture_h2yge")
-
-[sub_resource type="Curve" id="Curve_ig7tw"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.50706714, 0.05099833), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
-transparency = 1
-shading_mode = 0
-specular_mode = 2
-disable_ambient_light = true
-disable_fog = true
-disable_specular_occlusion = true
-vertex_color_use_as_albedo = true
-disable_receive_shadows = true
-billboard_mode = 2
-billboard_keep_scale = true
-
-[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_0xm2m"]
-material = SubResource("StandardMaterial3D_0xm2m")
-shape = 0
-size = 1.295
-sections = 20
-section_length = 0.1
-section_segments = 9
-curve = SubResource("Curve_ig7tw")
-
-[sub_resource type="Curve" id="Curve_1bvp3"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.33269966, 1), 0.0, 0.0, 0, 0, Vector2(0.89923954, 0), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="CurveTexture" id="CurveTexture_lquwl"]
-curve = SubResource("Curve_1bvp3")
-
-[sub_resource type="Gradient" id="Gradient_7mycd"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.15720081, 0.32352942, 0.51014197, 0.6764706, 0.8245436)
-colors = PackedColorArray(0.16548634, 0.78443116, 0.99999994, 1, 0, 0.864234, 0.30025715, 1, 0.62845683, 1, 0.60608405, 1, 0.9477964, 0.8556657, 0.33949938, 1, 1, 0.4815889, 0.29748052, 1, 0.9792498, 1.732707e-06, 0.57633585, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_272bh"]
-gradient = SubResource("Gradient_7mycd")
-
-[sub_resource type="Curve" id="Curve_lquwl"]
-_limits = [-1.0, 1.0, 0.0, 1.0]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_7mycd"]
-curve = SubResource("Curve_lquwl")
-
-[sub_resource type="Curve" id="Curve_5vw27"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.17680609, 0.9928404), 0.0, 0.0, 0, 0, Vector2(0.5380228, 0), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="CurveTexture" id="CurveTexture_kek77"]
-curve = SubResource("Curve_5vw27")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4c57u"]
-emission_shape_scale = Vector3(0.8, 0.8, 0.2)
-emission_shape = 6
-emission_ring_axis = Vector3(0, 0, 1)
-emission_ring_height = 1.0
-emission_ring_radius = 1.0
-emission_ring_inner_radius = 0.0
-emission_ring_cone_angle = 90.0
-orbit_velocity_curve = SubResource("CurveTexture_7mycd")
-gravity = Vector3(0, 1, 0)
-scale_min = 0.79999995
-scale_max = 1.1999999
-scale_curve = SubResource("CurveTexture_kek77")
-color_initial_ramp = SubResource("GradientTexture1D_272bh")
-alpha_curve = SubResource("CurveTexture_lquwl")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig7tw"]
-transparency = 1
-shading_mode = 0
-specular_mode = 2
-disable_ambient_light = true
-disable_fog = true
-disable_specular_occlusion = true
-vertex_color_use_as_albedo = true
-disable_receive_shadows = true
-billboard_mode = 2
-billboard_keep_scale = true
-
-[sub_resource type="QuadMesh" id="QuadMesh_0xm2m"]
-material = SubResource("StandardMaterial3D_ig7tw")
-size = Vector2(0.1, 0.5)
 
 [node name="Main" type="Node3D" unique_id=32182162]
 
@@ -144,35 +23,11 @@ light_energy = 2.811
 omni_range = 24.499
 
 [node name="Camera" type="Camera3D" parent="." unique_id=1911059349]
-transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071067, 0, -0.7071067, 0.7071068, 0, 6.8609033, 6.7463207)
+transform = Transform3D(1, 0, 0, 0, 0.8433914, 0.53729963, 0, -0.53729963, 0.8433914, 0, 3.7474394, 4.2398853)
 projection = 1
-size = 7.3142858
+size = 4.541
 near = 0.1
 far = 100.0
 
-[node name="coffee-mug" parent="." unique_id=234190910 instance=ExtResource("1_ig7tw")]
-
-[node name="GPUParticles3D2" type="GPUParticles3D" parent="coffee-mug" unique_id=1318547483]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.64373803, 0)
-cast_shadow = 0
-lod_bias = 128.0
-amount = 15
-lifetime = 3.3
-preprocess = 1.0
-fixed_fps = 60
-visibility_aabb = AABB(-2.7439935, -7.0993776, -2.099527, 5.4756813, 9.743624, 4.1893673)
-process_material = SubResource("ParticleProcessMaterial_ig7tw")
-draw_pass_1 = SubResource("RibbonTrailMesh_0xm2m")
-
-[node name="GPUParticles3D3" type="GPUParticles3D" parent="coffee-mug" unique_id=682223952]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.64373803, 0)
-visible = false
-cast_shadow = 0
-lod_bias = 128.0
-amount = 40
-lifetime = 3.3
-preprocess = 1.0
-fixed_fps = 60
-visibility_aabb = AABB(-2.7439935, -7.0993776, -2.099527, 5.4756813, 9.743624, 4.1893673)
-process_material = SubResource("ParticleProcessMaterial_4c57u")
-draw_pass_1 = SubResource("QuadMesh_0xm2m")
+[node name="coffee-mug" parent="." unique_id=1219522713 instance=ExtResource("1_ig7tw")]
+script = ExtResource("2_0xm2m")

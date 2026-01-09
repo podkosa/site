@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cdelj6ajvo5rm"]
+
+[ext_resource type="Shader" uid="uid://h0fgd7t4yvdj" path="res://model/displace_flat.tres" id="1_kua84"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_s23qh"]
+seed = 12
+frequency = 0.0068
+fractal_type = 0
+fractal_octaves = 1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_1aodr"]
+noise = SubResource("FastNoiseLite_s23qh")
+seamless = true
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_kua84")
+shader_parameter/SampleX = 0.0
+shader_parameter/Displace = SubResource("NoiseTexture2D_1aodr")
+shader_parameter/Strength = 0.14400024433999992
+shader_parameter/Color = Color(0.73333335, 0.42352942, 0.105882354, 1)

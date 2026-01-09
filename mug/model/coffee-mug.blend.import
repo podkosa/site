@@ -41,8 +41,8 @@ _subresources={
 "materials": {
 "Coffee": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://model/coffee.tres",
-"use_external/path": "uid://dag701m03f2t6"
+"use_external/fallback_path": "res://model/coffee-shader-mat.tres",
+"use_external/path": "uid://cdelj6ajvo5rm"
 }
 }
 }
