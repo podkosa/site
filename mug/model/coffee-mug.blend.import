@@ -43,6 +43,11 @@ _subresources={
 "use_external/enabled": true,
 "use_external/fallback_path": "res://model/coffee-shader-mat.tres",
 "use_external/path": "uid://cdelj6ajvo5rm"
+},
+"Mug": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://model/mug.tres",
+"use_external/path": "uid://rpdgcnpbv0dn"
 }
 }
 }

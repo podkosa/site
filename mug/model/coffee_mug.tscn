@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://116xg0t83kmo" path="res://model/coffee-mug.blend" id="1_f1t1y"]
 [ext_resource type="Script" uid="uid://dvauq47q7yidv" path="res://mouse_spin.gd" id="2_cgqxe"]
+[ext_resource type="Material" uid="uid://rpdgcnpbv0dn" path="res://model/mug.tres" id="3_vn2fj"]
 
 [sub_resource type="Animation" id="Animation_f1t1y"]
 length = 0.001
@@ -191,10 +192,13 @@ _data = {
 &"initial": SubResource("Animation_cgqxe")
 }
 
-[node name="coffee-mug" unique_id=205902718 instance=ExtResource("1_f1t1y")]
+[node name="coffee-mug" unique_id=965238430 instance=ExtResource("1_f1t1y")]
 script = ExtResource("2_cgqxe")
 
-[node name="Liquid" type="AnimationPlayer" parent="Coffee" parent_id_path=PackedInt32Array(1489854088) index="0" unique_id=688415006]
+[node name="Mug" parent="." index="0" unique_id=2122930066]
+surface_material_override/0 = ExtResource("3_vn2fj")
+
+[node name="Liquid" type="AnimationPlayer" parent="Coffee" parent_id_path=PackedInt32Array(1853194387) index="0" unique_id=688415006]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_f1t1y")
 autoplay = &"liquid"

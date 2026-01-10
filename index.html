@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Geist:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <main>
         Hello!
+        <button></button>
         <iframe src="./mug/export/coffee-mug.html"></iframe>
     </main>
     <style>
@@ -17,12 +23,17 @@
             --primary: #f57046;
             --contrast: #4352de;
             --accent: #b7162e;
-            --shadow: #181818;
+            --black: #181818;
+
         }
 
         body {
             background-color: var(--primary);
-            color: var(--contrast);
+            font-family: "Urbanist", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--black);
 
             main {
                 height: 600px;
