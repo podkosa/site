@@ -94,6 +94,7 @@ _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.50706714, 0.05099833), 0.0, 0.
 point_count = 3
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
+render_priority = 2
 transparency = 1
 shading_mode = 0
 specular_mode = 2
@@ -195,10 +196,10 @@ _data = {
 [node name="coffee-mug" unique_id=965238430 instance=ExtResource("1_f1t1y")]
 script = ExtResource("2_cgqxe")
 
-[node name="Mug" parent="." index="0" unique_id=2122930066]
+[node name="Mug" parent="." index="0" unique_id=1873608054]
 surface_material_override/0 = ExtResource("3_vn2fj")
 
-[node name="Liquid" type="AnimationPlayer" parent="Coffee" parent_id_path=PackedInt32Array(1853194387) index="0" unique_id=688415006]
+[node name="Liquid" type="AnimationPlayer" parent="Coffee" parent_id_path=PackedInt32Array(304606119) index="0" unique_id=688415006]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_f1t1y")
 autoplay = &"liquid"
