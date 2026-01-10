@@ -1,0 +1,10 @@
+services:
+  app:
+    image: 'docker.io/nginx:latest'
+    restart: unless-stopped
+    ports:
+      - 443:443 # HTTPS
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./static:/app:ro,Z
+      - /etc/letsencrypt/:/etc/letsencrypt/:ro
