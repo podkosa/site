@@ -13,12 +13,19 @@
         <iframe src="./mug/export/coffee-mug.html"></iframe>
     </main>
     <style>
+        :root {
+            --primary: #f57046;
+            --contrast: #4352de;
+            --accent: #b7162e;
+            --shadow: #181818;
+        }
+
         body {
-            background-color: blueviolet;
+            background-color: var(--primary);
+            color: var(--contrast);
 
             main {
                 height: 600px;
-                color: violet;
                 text-align: center;
                 vertical-align: middle;
                 display: flex;
